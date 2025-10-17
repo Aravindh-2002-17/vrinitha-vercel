@@ -1,0 +1,77 @@
+.hero {
+   position: relative;
+  height: auto;
+  background: linear-gradient(135deg, #14532d, #052e16); /* green gradient */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 1;
+  margin-bottom: 40px;
+}
+.overlay {
+  background: #164234;
+background: linear-gradient(90deg,rgba(22, 66, 52, 1) 29%, rgba(38, 127, 36, 0.8) 100%); /* dark green overlay */
+  color: #fff;
+  padding: 100px;
+  width: 700px;
+  clip-path: polygon(0 0, 70% 0, 100% 100%, 0% 100%); /* slanted shape */
+    
+}
+
+.overlay h1 {
+  font-size: 3.5rem;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.overlay button {
+  background: #6cc24a;
+  color: #000;
+  font-weight: 400;
+  font-size: 14px;
+  border: none;
+  padding: 10px 55px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.overlay button:hover {
+  background: #57a83b;
+}
+@media (max-width: 768px) {
+  .hero {
+    height: 250px; /* 👈 shrink the hero section */
+    padding: 20px 20px;
+    justify-content: center;
+   
+  }
+
+  .overlay {
+    background: rgba(0, 70, 0, 0.85);
+    color: #fff;
+    position: relative;
+    padding: 20px;         /* reduced padding */
+    width: 400px;
+    height: 250px;    /* reduced box width */
+    clip-path: polygon(0 0, 85% 0, 100% 100%, 0% 100%);
+    margin-left:-250px;
+    
+  }
+
+  .overlay h1 {
+    font-size: 1.3rem;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 151px;
+  }
+
+  .overlay button {
+    padding: 5px 18px;
+    font-size: 0.9rem;
+    margin-top: 140px;
+    margin-left: 150px;
+  }
+}

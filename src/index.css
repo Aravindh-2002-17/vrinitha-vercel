@@ -1,0 +1,30 @@
+/* Reset default browser margin/padding */
+@import "tailwindcss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Sans", sans-serif;
+  font-optical-sizing: auto;
+}
+.shadow-yellow-solid {
+  box-shadow: 4px 4px 0 0 rgba(255, 255, 0, 1); /* solid yellow */
+}
+.custom-input:focus {
+  box-shadow: none !important;           /* Removes blue glow */
+  outline: none;                         /* Removes default outline */
+  border-color: white !important;      /* Optional: green border on focus */
+}
+
+/* Make sure this CSS is in your loaded stylesheet */
+
+.custom-input::placeholder {
+  color: white;  /* White with good visibility */
+  opacity: 1;    
+                     /* Required for Firefox */
+}

@@ -66,7 +66,7 @@ const CardSection = () => {
       </div>
 
       {/* Second Row: Cards 4–5 (Centered) */}
-      <div className="card-grid center-two">
+      <div className=" center-two">
         {cardData.slice(3).map((card, index) => (
            <div className="product-card p-0" key={index}>
               <img

@@ -76,6 +76,7 @@ input::placeholder {
 
 .form-control:focus,
 .form-select:focus {
+  border: 2px solid red;
   box-shadow: 0 0 0 0.15rem rgba(0, 150, 136, 0.25);
   border-color: #009688;
 }
@@ -179,4 +180,42 @@ form .form-control:focus {
 
 .btn-success:hover {
   background-color: #76c752;
+}
+
+
+.card-section-bg {
+  background-color: #f8f9fa;
+}
+
+/* Default card image size */
+.custom-card-img {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Description styling */
+.custom-description {
+  white-space: normal;
+  word-break: break-word;
+}
+
+/* 🔹 Mobile view adjustments */
+@media (max-width: 768px) {
+  .custom-card {
+    width: 90%;
+    max-width: 320px;
+    margin: 0 auto; /* centers card */
+  }
+
+  .custom-card-img {
+    height: 160px; /* smaller image on mobile */
+  }
+
+  .custom-description {
+    font-size: 0.9rem; /* slightly smaller text */
+  }
+
+  .row.ps-5 {
+    padding-left: 0 !important; /* remove side padding on mobile */
+  }
 }

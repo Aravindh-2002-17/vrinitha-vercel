@@ -99,17 +99,20 @@
   .card-grid {
     grid-template-columns: 1fr; /* Single column on mobile */
     gap: 15px;
-    padding: 0 50px;
-    margin-right: 70px; /* Optional padding to avoid touching edges */
-    
+    padding: 0 20px;
+    margin-right: 0px; /* Optional padding to avoid touching edges */
+   
+    margin-left: 0px;
+    width: 100%;
   }
   .center-two {
   display: flex;
   justify-content: center;
+  width: 100%;
   gap: 20px;
   flex-wrap: wrap;
   padding: 20px;
-  margin-left: 70px;
+  margin-left: 0px;
 }
   .card-section {
   padding: 60px 0px;
@@ -117,7 +120,7 @@
   text-align: center;
 }
 .product-card-image{
-  border: 2px solid red;
+  
   width: 20px;
   display: none;
 }

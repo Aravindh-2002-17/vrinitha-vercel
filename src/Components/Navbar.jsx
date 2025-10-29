@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/logo.png";
@@ -6,11 +6,31 @@ import logo from "../assets/logo.png";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  // ✅ Detect mobile screen
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+      if (window.innerWidth > 768) {
+        setIsMenuOpen(false); // Close menu when switching to desktop
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const handleDropdown = (menu) => {
-    setOpenDropdown(openDropdown === menu ? null : menu);
+    if (!isMobile) {
+      setOpenDropdown(openDropdown === menu ? null : menu);
+    }
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    setOpenDropdown(null);
   };
 
   return (
@@ -19,24 +39,19 @@ const Navbar = () => {
         <img className="head-logo" src={logo} alt="Vrintha Logo" />
       </div>
 
+      {/* ✅ Nav Links */}
       <div className={`nav-links ${isMenuOpen ? "active" : ""}`}>
         <div className="nav-item">
-          <NavLink
-            to="/"
-            end
-            className={({ isActive }) =>
-              isActive ? "nav-link active-link" : "nav-link"
-            }
-          >
-            Home
+          <NavLink to="/" end className="nav-link" onClick={closeMenu}  style={{ fontFamily: " sans-serif", fontWeight: "400", fontSize: "14px" }}>
+            HOME
           </NavLink>
         </div>
 
         <div className="nav-item">
-          <a href="#">ABOUT</a>
+          <a href="#" onClick={closeMenu}>ABOUT</a>
         </div>
 
-        {/* ✅ MACHINE PRODUCTS Dropdown */}
+        {/* MACHINE PRODUCTS */}
         <div
           className="nav-item dropdown"
           onMouseEnter={() => handleDropdown("machine")}
@@ -45,22 +60,22 @@ const Navbar = () => {
           <a href="#" className="dropdown-toggle">
             MACHINE PRODUCT
           </a>
-          {openDropdown === "machine" && (
+          {openDropdown === "machine" && !isMobile && (
             <div className="dropdown-menu">
-              <NavLink to="/products/machine1" className="dropdown-item">
+              <NavLink to="/products/machine1" className="dropdown-item" onClick={closeMenu}>
                 Machine Type 1
               </NavLink>
-              <NavLink to="/products/machine2" className="dropdown-item">
+              <NavLink to="/products/machine2" className="dropdown-item" onClick={closeMenu}>
                 Machine Type 2
               </NavLink>
-              <NavLink to="/products/machine3" className="dropdown-item">
+              <NavLink to="/products/machine3" className="dropdown-item" onClick={closeMenu}>
                 Machine Type 3
               </NavLink>
             </div>
           )}
         </div>
 
-        {/* ✅ AGRI PRODUCTS Dropdown */}
+        {/* AGRI PRODUCTS */}
         <div
           className="nav-item dropdown"
           onMouseEnter={() => handleDropdown("agri")}
@@ -69,15 +84,15 @@ const Navbar = () => {
           <a href="#" className="dropdown-toggle">
             AGRI PRODUCTS
           </a>
-          {openDropdown === "agri" && (
+          {openDropdown === "agri" && !isMobile && (
             <div className="dropdown-menu">
-              <NavLink to="/products/agri1" className="dropdown-item">
+              <NavLink to="/products/agri1" className="dropdown-item" onClick={closeMenu}>
                 Agri Product 1
               </NavLink>
-              <NavLink to="/products/agri2" className="dropdown-item">
+              <NavLink to="/products/agri2" className="dropdown-item" onClick={closeMenu}>
                 Agri Product 2
               </NavLink>
-              <NavLink to="/products/agri3" className="dropdown-item">
+              <NavLink to="/products/agri3" className="dropdown-item" onClick={closeMenu}>
                 Agri Product 3
               </NavLink>
             </div>
@@ -85,27 +100,27 @@ const Navbar = () => {
         </div>
 
         <div className="nav-item">
-          <a href="#">GALLERY</a>
+          <a href="#" onClick={closeMenu}>GALLERY</a>
         </div>
 
         <div className="nav-item">
-          <a href="#">ENQUIRY</a>
+          <a href="#" onClick={closeMenu}>ENQUIRY</a>
         </div>
       </div>
 
-      {/* ✅ Contact button */}
+      {/* ✅ Contact Button */}
       <div className="nav-item">
         <NavLink
           to="/contact"
-          className={({ isActive }) =>
-            isActive ? "contact-btn active-link" : "contact-btn"
-          }
+          className="contact-btn"
           style={{ backgroundColor: "#76c752" }}
+          onClick={closeMenu}
         >
           CONTACT
         </NavLink>
       </div>
 
+      {/* ✅ Hamburger Icon */}
       <div className={`menu-icon ${isMenuOpen ? "open" : ""}`} onClick={toggleMenu}>
         <div className="bar"></div>
         <div className="bar"></div>

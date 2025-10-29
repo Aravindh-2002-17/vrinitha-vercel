@@ -171,7 +171,7 @@ const Footer = () => {
 <hr className="text-white"   style={{
     borderColor: 'white',
     borderWidth: '1px',
-    width: '1100px',    // controls the length (shrink horizontally)
+    width: '110px',    // controls the length (shrink horizontally)
     margin: '20px auto', // centers it horizontally
   }} />
 

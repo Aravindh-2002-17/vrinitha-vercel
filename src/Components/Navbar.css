@@ -7,6 +7,8 @@
 
 body {
   margin: 0;
+
+
   
 }
 
@@ -33,7 +35,7 @@ body {
 .nav-links {
   display: flex;
   gap: 25px;
-  
+
   
 }
 
@@ -89,7 +91,6 @@ body {
 
 /* ✅ Active page highlight */
 .active-link {
-  color: #76c752;
   font-weight: 700;
   border-bottom: 2px solid #76c752;
 }
@@ -214,6 +215,10 @@ body {
     box-shadow: none;
     background-color: transparent;
   }
+  .nav-links {
+  display: none;
+}
+
 
   .dropdown-menu a {
     padding-left: 25px;
@@ -320,6 +325,14 @@ body {
   color: black;
 }
 
+.nav-links.active {
+  display: flex;
+  flex-direction: column;
+  background-color: #072b18;
+  padding: 20px 0;
+}
+
+
 /* ✅ Fix for navbar text alignment on small screens */
 @media screen and (max-width: 768px) {
   .nav-links {
@@ -328,3 +341,41 @@ body {
   }
 }
 
+/* ✅ Default: visible on desktop */
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* ✅ Mobile: hidden until toggled */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #072b18;
+    padding: 20px 0;
+    width: 100%;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+/* Fix NavLink active visibility */
+.nav-link {
+  color: #333; /* normal text color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #76c752; /* hover color */
+}
+
+/* Active page highlight */
+.nav-link.active {
+  color: white !important; /* keep visible even after page reload */
+  font-weight: 600;
+}

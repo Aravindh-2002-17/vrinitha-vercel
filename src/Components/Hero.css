@@ -30,7 +30,7 @@ background: linear-gradient(90deg,rgba(22, 66, 52, 1) 29%, rgba(38, 127, 36, 0.8
   background: #6cc24a;
   color: #000;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   border: none;
   padding: 10px 55px;
   border-radius: 25px;
@@ -69,10 +69,13 @@ background: linear-gradient(90deg,rgba(22, 66, 52, 1) 29%, rgba(38, 127, 36, 0.8
     margin-left: 151px;
   }
 
-  .overlay button {
-    padding: 5px 18px;
-    font-size: 0.9rem;
-    margin-top: 140px;
-    margin-left: 150px;
+    .overlay button {
+    display: inline-block;
+    padding: 2px 25px;
+    font-size: 1rem;
+    margin:140px 20px 100px 140px;
+    border: 2px solid #6cc24a;
+    position: static; /* ✅ fixed */
+    width: auto;
   }
 }

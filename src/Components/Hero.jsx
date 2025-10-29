@@ -11,6 +11,7 @@ const Hero = () => {
       <div className="overlay">
         <h1>
           Insects   <br></br> Problem In <br /> Your Food <br />Products?
+       
         </h1>
         <button>CONTACT</button>
       </div>

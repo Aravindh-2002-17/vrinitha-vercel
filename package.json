@@ -1,12 +1,11 @@
 {
   "name": "vrinitha",
-  "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "homepage": "https://Aravindh-2002-17.github.io/vrinitha-finel-01",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
@@ -18,8 +17,11 @@
     "react-bootstrap": "^2.10.10",
     "react-dom": "^19.1.1",
     "react-fast-marquee": "^1.6.5",
+    "react-hot-toast": "^2.6.0",
+    "react-router-dom": "^7.9.4",
     "react-slick": "^0.31.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "vit": "^0.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",

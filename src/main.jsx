@@ -9,7 +9,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     {/* ✅ Add basename here */}
-    <BrowserRouter basename="/vrinitha-finel">
+    <BrowserRouter>
       <App />
     </BrowserRouter>
   </StrictMode>

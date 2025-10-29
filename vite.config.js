@@ -4,6 +4,6 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/vrinitha-finel/',
+  base: '/vrinitha-finel-01/',
   plugins: [ tailwindcss(),react()]
 })

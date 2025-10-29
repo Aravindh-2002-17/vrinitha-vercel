@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 body {
@@ -11,6 +12,17 @@ body {
   padding: 0;
   font-family: "Sans", sans-serif;
   font-optical-sizing: auto;
+
+}
+.whatsapp-float img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: transparent; /* removes white background */
+  object-fit: cover;
+  padding: 0; /* ensure no extra space inside */
+  margin: 0;
+  display: block;
 }
 .shadow-yellow-solid {
   box-shadow: 4px 4px 0 0 rgba(255, 255, 0, 1); /* solid yellow */
@@ -27,4 +39,35 @@ body {
   color: white;  /* White with good visibility */
   opacity: 1;    
                      /* Required for Firefox */
+}
+
+/* Default style for hr */
+.custom-hr {
+  width: 82%;
+  border-top: 2px solid white;
+  margin: 1rem auto;
+
+}
+
+/* Mobile only overrides */
+@media (max-width: 767.98px) {
+  .custom-hr {
+    width: 90% !important;      /* Full width on mobile */
+    border-top: 2px solid white; /* thicker line on mobile */
+  }
+}
+/* CardSection3.css */
+
+/* Default padding for all screen sizes */
+.card-section-padding {
+  padding-left: 3rem; /* default padding (desktop) */
+  padding-right: 3rem;
+}
+
+/* Mobile: Reduce padding */
+@media (max-width: 768px) {
+  .card-section-padding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }

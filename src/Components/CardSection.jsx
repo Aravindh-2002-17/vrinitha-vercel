@@ -17,13 +17,13 @@ const cardData = [
   },
   {
     image: img2,
-    title: "Card Two",
+    title: "Uv Light Trap",
     description: "A UV light trap attracts insects using ultraviolet light and safely captures them on sticky boards or grids",
     link: "#",
   },
   {
     image: img3,
-    title: "Card Three",
+    title: "Insect Egg Removel machine",
     description: "Customize this paragraph as you need.This is a short paragraph for card on",
     link: "#",
   },
@@ -49,7 +49,7 @@ const CardSection = () => {
       {/* First Row: Cards 1–3 */}
       <div className="card-grid">
         {cardData.slice(0, 3).map((card, index) => (
-          <div className="product-card " key={index}>
+          <div className="product-card" key={index}>
               <img
                 src={card.image}
                 alt={card.title}

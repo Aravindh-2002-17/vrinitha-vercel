@@ -45,7 +45,7 @@ const Footer = () => {
       return (
         <div key={i} className="col-6 col-md-3">
           <div
-            className="bg-white text-black rounded  d-flex flex-column justify-content-center align-items-center"
+            className="bg-white text-black rounded  d-flex flex-row justify-content-center align-items-center "
             style={{
               boxShadow: `6px 7px 0 ${boxShadows[i]}`,
               borderRadius: '8px',
@@ -56,8 +56,8 @@ const Footer = () => {
           >
             <img
               src={img}
-              alt={`Badge ${i + 1}`}
-              style={{ width: i === 1 ? "auto" : "60px", marginBottom: "12px" }}
+              alt={`Badge ${i + 1}`} className="me-3"
+              style={{ width: i === 1 ? "auto" : "60px", marginBottom: "12px" ,}}
             />
             <h3 style={{ fontSize: "20px", fontWeight: "600", margin: 0 }}>
               {titles[i]}

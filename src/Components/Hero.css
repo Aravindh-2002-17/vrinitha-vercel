@@ -36,6 +36,7 @@ background: linear-gradient(90deg,rgba(22, 66, 52, 1) 29%, rgba(38, 127, 36, 0.8
   border-radius: 25px;
   cursor: pointer;
   transition: 0.3s ease;
+  width: 200px;
 }
 
 .overlay button:hover {

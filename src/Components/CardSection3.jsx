@@ -27,7 +27,7 @@ const cards = [
     image: img4,
     title: "Crop Monitor",
     description:
-      "Real-time crop health analytics and alerts.  description just to make it obvious.",
+      "Real-time crop health analytics and alerts.  description just ",
     link: "#crop-monitor",
   },
 ];

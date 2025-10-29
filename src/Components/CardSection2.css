@@ -3,6 +3,7 @@
   background-color: #f9f9f9;
   text-align: center;
    background-color:#F0FFEE;
+  
 }
 
 .product-section-title {
@@ -23,22 +24,26 @@
   color: black;
   border: none;
   border-radius: 25px;
-  padding: 12px 84px;
+  padding: 1px 8px;
   font-size: 16px;
   font-weight: 400;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  width: 300px;
+  height: 50px;
 }
 .product-btn-2 {
   background-color:transparent;
   color: black;
   border: 1px solid #6cc24a;
   border-radius: 25px;
-  padding: 12px 84px;
+  padding: 10px 8px;
   font-size: 16px;
   font-weight: 400;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  width: 300px;
+  height: 50px;
 }
 
 .product-btn:hover {
@@ -49,11 +54,12 @@
 .product-row {
   display: grid;
   grid-template-columns: repeat(4, max-content);
-  gap: 30px;
+  gap:50px;
   overflow-x: auto;
   padding-bottom: 10px;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;
+ 
 }
 
 .product-row::-webkit-scrollbar {
@@ -68,6 +74,7 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   margin-bottom: 10px;
+
 
 }
 
@@ -122,7 +129,7 @@
 }
 
 .product-row-wrapper {
-  padding: 0 40px; /* Add space on both sides */
+  padding: 0 130px; /* Add space on both sides */
   box-sizing: border-box;
 }
 .product-row {

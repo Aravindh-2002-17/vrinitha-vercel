@@ -77,6 +77,48 @@ body {
 .nav-links:hover{
     color:#5cae3e ;
   }
+.nav-link {
+  color: #333;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: #76c752; /* hover color */
+}
+
+/* ✅ Active page highlight */
+.active-link {
+  color: #76c752;
+  font-weight: 700;
+  border-bottom: 2px solid #76c752;
+}
+.contact-btn {
+  display: inline-block;
+  padding: 8px 50px;
+  background-color:  #76c752; /* your brown theme */
+  color: black;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-btn:hover {
+  background-color:  #76c752;
+  transform: scale(1.03);
+}
+
+/* ✅ Active link keeps the same size, just change color or glow */
+.contact-btn.active-link {
+  background-color:  #76c752;
+  transform: none;
+}
+
+
+
 /* Responsive */
 @media screen and (max-width: 768px) {
   .nav-links {
@@ -85,7 +127,7 @@ body {
     left: 0;
     right: 0;
     flex-direction: column;
-    background-color: #022717;
+    background-color: #76c752;
     align-items: center;
     display: none;
     padding: 20px 0;
@@ -109,3 +151,180 @@ body {
   margin-left: 10px;
 }
 }
+/* ---------------- DROPDOWN MENU ---------------- */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px 0;
+}
+
+/* Dropdown Arrow */
+.dropdown .arrow {
+  font-size: 10px;
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate arrow on hover (desktop) */
+.dropdown:hover .arrow {
+  transform: rotate(180deg);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #072b18;
+  border-radius: 8px;
+  min-width: 180px;
+  z-index: 999;
+  flex-direction: column;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 15px;
+  color: black;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+  background-color: #76c752;
+  color: black;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  .dropdown-menu a {
+    padding-left: 25px;
+  }
+
+  /* Disable arrow rotation on mobile hover */
+  .dropdown .arrow {
+    transform: none !important;
+  }
+}
+/* ------------------ DROPDOWN MENU ------------------ */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.dropdown .arrow {
+  font-size: 10px;
+  margin-left: 5px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #072B18;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.dropdown-item {
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #76c752;
+  color: black;
+}
+/* ---------------- NAVBAR LAYOUT FIX ---------------- */
+.nav-links {
+  display: flex;
+  align-items: center; /* ✅ Vertically centers all nav items */
+  justify-content: center;
+  gap: 25px; /* ✅ Even spacing between menu items */
+}
+
+/* Each nav item stays inline */
+.nav-item {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown toggle text */
+.dropdown-toggle {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-block;
+  padding: 5px 0;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #072B18;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  text-align: left;
+}
+
+/* Dropdown item links */
+.dropdown-item {
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #76c752;
+  color: black;
+}
+
+/* ✅ Fix for navbar text alignment on small screens */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
